@@ -34,7 +34,7 @@ const UserList = (props) => {
     function getUserItem({ item: user }) {
         return (
             <ListItem bottomDivider key={user.id} onPress={()=>{
-                props.navigation.navigate('UserForm')
+                props.navigation.navigate('UserForm',user)
             }}>
                 <Avatar rounded source={{uri: user.avatarUrl}}/>
                 <ListItem.Content>
